@@ -9,9 +9,9 @@ public class VolumeManager : MonoBehaviour
 
     private void Start()
     {
-        if(!PlayerPrefs.HasKey("musicVolume"))
+        if(!PlayerPrefs.HasKey("BackgroundMusic"))
         {
-            PlayerPrefs.SetFloat("musicVolume", 1);
+            PlayerPrefs.SetFloat("BackgroundMusic", 1);
             Load();
         }
         else
@@ -28,11 +28,11 @@ public class VolumeManager : MonoBehaviour
 
     private void Load()
     {
-        volumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
+        volumeSlider.value = PlayerPrefs.GetFloat("BackgroundMusic");
     }
 
     private void Save()
     {
-        PlayerPrefs.SetFloat("musicVolume", volumeSlider.value);
+        PlayerPrefs.SetFloat("BackgroundMusic", volumeSlider.value);
     }
 }
